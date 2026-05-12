@@ -1,2 +1,2 @@
 # Lab 6 - Starter
-LINK: 
+LINK: https://chungkaley.github.io/Lab6_Starter/
