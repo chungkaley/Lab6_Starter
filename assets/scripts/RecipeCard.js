@@ -15,72 +15,85 @@ class RecipeCard extends HTMLElement {
 		const style = document.createElement('style');
 		// A4. TODO - Insert all of the styles from cardTemplate.html into the <style> element you just made (copy everything INSIDE the <style> tag>)
 		style.textContent = `
-            * {
-                font-family: sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            article {
-                align-items: center;
-                border: 1px solid rgb(223, 225, 229);
-                border-radius: 8px;
-                display: flex;
-                flex-direction: column;
-                height: 425px;
-                justify-content: space-between;
-                margin: 0;
-                padding: 0 16px 16px 16px;
-                width: 178px;
-            }
-            div.rating {
-                align-items: center;
-                column-gap: 5px;
-                display: flex;
-            }
-            div.rating > img {
-                height: auto;
-                display: inline-block;
-                object-fit: contain;
-                width: 80px;
-            }
-            article > img {
-                border-top-left-radius: 8px;
-                border-top-right-radius: 8px;
-                height: 118px;
-                object-fit: cover;
-                margin-left: -16px;
-                width: calc(100% + 32px);
-            }
-            p.ingredients {
-                height: 32px;
-                line-height: 16px;
-                padding-top: 4px;
-                overflow: hidden;
-            }
-            p.organization {
-                color: contact;
-                font-size: 15px;
-            }
-            p.title {
-                display: -webkit-box;
-                font-size: 16px;
-                font-weight: 700;
-                line-height: 20px;
-                overflow: hidden;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-            }
-            time {
-                font-size: 14px;
-                color: #70757a;
-            }
-        `;
+        * {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        article {
+            align-items: flex-start;
+            border: 1px solid rgb(223, 225, 229);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px; 
+            height: 300px;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0 16px 16px 16px;
+            width: 178px;
+        }
+        div.rating {
+            align-items: center;
+            column-gap: 5px;
+            display: flex;
+        }
+        div.rating > img {
+            height: auto;
+            display: inline-block;
+            object-fit: contain;
+            width: 80px;
+        }
+        article > img {
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            height: 100px; 
+            object-fit: cover;
+            margin-left: -16px;
+            width: calc(100% + 32px);
+        }
+        p.ingredients {
+            color: gray;
+            height: 32px;
+            line-height: 16px;
+            padding-top: 4px;
+            overflow: hidden;
+        }
+        p.organization {
+            color: black; 
+            font-size: 15px;
+            margin-top: auto;
+        }
+        p.title {
+            color: #763ca4;
+            display: -webkit-box;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 20px;
+            overflow: hidden;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            margin-bottom: 4px;
+        }
+        p.title a,
+        p.title a:visited {
+            color: #763ca4;
+            font-family: arial, sans-serif;
+            font-weight: 700;
+        }
+        time {
+            font-size: 14px;
+            color: #70757a;
+            display: block;
+            text-align: left;
+        }
+    `;
 		// A5. TODO - Append the <style> and <article> elements to the Shadow DOM
 		shadow.appendChild(style);
         shadow.appendChild(article);
